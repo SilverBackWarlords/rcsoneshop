@@ -1,0 +1,137 @@
+X-Google-Smtp-Source: AK7set8AoRBEbqOs2sFRIaUFoTQOeoaaeUlZXGLrbf/8uGxelKCfVlu4NSHJjfnxvhM7OE1SU8hT
+X-Received: by 2002:ac8:5ccc:0:b0:3d5:cf4e:bd0 with SMTP id s12-20020ac85ccc000000b003d5cf4e0bd0mr2268517qta.63.1679432308716;
+        Tue, 21 Mar 2023 13:58:28 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1679432308; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=U7w3AxqAaLheB765yucRfpVdWISHKYv/T36Gy/krDLMZEDRtK2FHP1HiwM4+6j5n59
+         BZprDqgxvUbktUsg6hq1f/q3ngE2eOHODOQxioSpNv5D8DY9w0vLZ2oY6MdIVCt+Evhf
+         NdGW6KIEzVyNCgQ4jGatQAVEDpjZSuAqjAVKAKjjpQpAhSOPn0aWh4WzB7r2iDR9IUj/
+         7P3wMliNj6UMEjFHjd5JXIMWtg2f4k9gaQexPykzuSHooEcI2SKaz7zcZyg0Q6W1BLaQ
+         PxVxqJrlrndVezDwuUeoJj2rH7Ki9FjwYSt2kgMeE8jJCAAGaq63rhbrRWK6XkkV0Uqa
+         gf9Q==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:in-reply-to
+         :references:message-id:date:thread-index:thread-topic:subject:to
+         :from:dkim-signature;
+        bh=jLS7KUkuSZee5nqJ+R6TSxMdUrAZdOdXDm72HdSqFII=;
+        b=tLz+lecDi8NngZc2qTftLumFejXZQcWrM86Wq1ximilSWKLtZS0+xYU6Q82Zd3RiOO
+         Qo+2WY7Gi+hw22Ho8Lhl/cnIXV7j5l0rlwtMnKmZqccnNA5b7x0vjtGxz7tYUSL0dnjl
+         p0Ug/PdBPH3TGFvd3NGMWmAknwWlEjqtb1Qqw/gXmQ8Y8KOtjJgMyr87bb/FjC0/b0fC
+         Uh+Yz3tyMagP1vgf2/YISqIfDawWUI840kUfNDzcu9a9l/Ous15iAAtbAi8IrTUxglE2
+         WQQeQpBp+jIEJ2zYH4jO9PKgsfUNjpAloF/MjUJFYnLdIGh/rA1HTZNUoCnVrnLjWafb
+         z6jQ==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=BAP4lovg;
+       arc=pass (i=1 spf=pass spfdomain=gmail.com dkim=pass dkdomain=gmail.com dmarc=pass fromdomain=gmail.com);
+       spf=pass (google.com: domain of silverbackgodx@gmail.com designates 209.85.166.41 as permitted sender) smtp.mailfrom=silverbackgodx@gmail.com
+Return-Path: <silverbackgodx@gmail.com>
+Received: from mailstream-canary.mxrecord.io (mailstream-useast-egress001.mxrecord.io. [52.0.67.109])
+        by mx.google.com with ESMTPS id e8-20020a05622a110800b003e385fd9dc5si1614349qty.167.2023.03.21.13.58.28
+        for <noreply@notify.cloudflare.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 21 Mar 2023 13:58:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of silverbackgodx@gmail.com designates 209.85.166.41 as permitted sender) client-ip=209.85.166.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=BAP4lovg;
+       arc=pass (i=1 spf=pass spfdomain=gmail.com dkim=pass dkdomain=gmail.com dmarc=pass fromdomain=gmail.com);
+       spf=pass (google.com: domain of silverbackgodx@gmail.com designates 209.85.166.41 as permitted sender) smtp.mailfrom=silverbackgodx@gmail.com
+Received: from mailstream004.us-east-1.canary.area1.internal (localhost [127.0.0.1])
+	by mailstream-canary.mxrecord.io (Postfix) with ESMTP id 4Ph3q83txpzgYKX
+	for <noreply@notify.cloudflare.com>; Tue, 21 Mar 2023 20:58:28 +0000 (UTC)
+ARC-Seal: i=1; cv=none; t=1679432308; a=rsa-sha256;
+	 d=mxrecord.io; s=arc202004;
+	 b=KXE36bph2S/snv6SHVKO/TV8bT6gYP0mukfq98tJBIBwedmICyF7uJuKrN9VsYqFE9aIqJy88
+	  CB9XaRKZCmVfX3mCSIYVKiGrAcF+7HKEZhzBeMFdlseMYXH7+0ThCw3flNlNQMzqjJqZpZ4Os3p
+	  XEAJjhlpSZLVl7Z9zRMUjcrPVTTg/4oM1ngROkN8Kmh51rJCLjjGOrhzcy5pNjEk0rITyUAz8OM
+	  VS2P6g0fxqqGMokeFAf4vvcza+gnjgXIySCuN/2ummo/Kk4S7Dw2QXO9YWA0J80XCfpD6U+UAr/
+	  mManet4CEJbDz8ZzlBMv08BkCoQ3cd39ZbbwWeqcxnBw==;
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=mxrecord.io; s=arc202004;
+	 h=from:from:reply-to:reply-to:subject:subject:date:date:message-id:message-id:to:to:cc
+	  :mime-version:mime-version:content-type:content-type:x-area1security-disposition
+	  :x-area1security-disposition;
+	 bh=jLS7KUkuSZee5nqJ+R6TSxMdUrAZdOdXDm72HdSqFII=;
+	 b=OwoMxtyuhHQibHIohgNozMLDTvMr+yqu1zZ2/17ZqO48ehJcG15IrAiTnAs6Wy7/MFqeTYb0v
+	  k2+WuVzao2mMDkhbKmlohU29398ckPdqHl2IYQafW1IgoIFwEDL+RtHP5wCNPjDVYayZJiodh7j
+	  9hKX3uSZ8kpCvpEA4MRdlH6j2ascyOEwxnmfW0b8sUSqZZaiKWy3RSBTf/pGuN4m+7+bCKf1kcW
+	  6pJs2V5S04hm3YtahuhjPpgk/ak/dbOUzDlWN4yCrlYdQodpq27JJbdqual0R59YoU2cPk8cbN0
+	  ODoas3s7LxxiKx7vdIRsAI009X4pWop2Y15XH6DteKJg==;
+ARC-Authentication-Results: i=1; mailstream-canary.mxrecord.io;
+	 dmarc=pass (p=none) header.from=gmail.com;
+	 spf=pass smtp.mailfrom=gmail.com;
+	 dkim=pass header.i=@gmail.com header.s=20210112 header.b=BAP4lovg
+Received-SPF: pass (mailstream-canary.mxrecord.io: gmail.com designates 209.85.166.41 as permitted sender) client-ip=209.85.166.41; envelope-from=silverbackgodx@gmail.com; helo=mail-io1-f41.google.com;
+Authentication-Results: mailstream-canary.mxrecord.io;
+	 dmarc=pass (p=none) header.from=gmail.com;
+	 spf=pass smtp.mailfrom=gmail.com;
+	 dkim=pass header.i=@gmail.com header.s=20210112 header.b=BAP4lovg
+Received: from mailstream-canary.mxrecord.io (localhost. [127.0.0.1])
+        by localhost
+        with SMTP (Area1Security-Mailstream 2.171.1) id LFIQMULE
+        for noreply@notify.cloudflare.com;
+        Tue, 21 Mar 2023 20:58:28 +0000 (GMT)
+Received: from mail-io1-f41.google.com (mail-io1-f41.google.com [209.85.166.41])
+	(using TLSv1.3 with cipher TLS_AES_128_GCM_SHA256 (128/128 bits)
+	 key-exchange X25519 server-signature RSA-PSS (4096 bits) server-digest SHA256)
+	(No client certificate requested)
+	by mailstream-canary.mxrecord.io (Postfix) with ESMTPS id 4Ph3q829QGzgYL6
+	for <noreply@notify.cloudflare.com>; Tue, 21 Mar 2023 20:58:28 +0000 (UTC)
+Received: by mail-io1-f41.google.com with SMTP id k17so7572105iob.1
+        for <noreply@notify.cloudflare.com>; Tue, 21 Mar 2023 13:58:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112; t=1679432307;
+        h=mime-version:content-language:accept-language:in-reply-to
+         :references:message-id:date:thread-index:thread-topic:subject:to
+         :from:from:to:cc:subject:date:message-id:reply-to;
+        bh=jLS7KUkuSZee5nqJ+R6TSxMdUrAZdOdXDm72HdSqFII=;
+        b=BAP4lovgBtLCqhGeO/WHVDXwT1u4uJwoOvHK40iPShzTdkG9QY8kya6Gtl9tFfro2B
+         X+wAFf47t4dcOtdDwx95yBZmgV6UDHvc1RmQGECmy+Ijg3CPssSgiR/VYTPxyfEp9QkD
+         CmgkR0Ivc2Rehx1Dqrr0KQeplHa9NEKT1X4DFL+uoi+NA2ZvU8RI1loLdFUzpOvEu1n6
+         +OHTs8TzG11OoKulyxbL9mX1/icfbIe48jyTpximyxXc8qOoTSei9vsLqQvTsOJOM8NV
+         0Np4RyC91jPLwQ5ckQBpl3mUniGTXmjCj6GRY8suOvV8AC9YOfphmcTF5P003tKO4ydo
+         EfyQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112; t=1679432307;
+        h=mime-version:content-language:accept-language:in-reply-to
+         :references:message-id:date:thread-index:thread-topic:subject:to
+         :from:x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=jLS7KUkuSZee5nqJ+R6TSxMdUrAZdOdXDm72HdSqFII=;
+        b=Lt6XhJE+JtJqdDJ1n82qeNMhvSUzgy/hqaI5dnQaHXwE0w6S7zYZxMM7HBIML1zCyA
+         B/qIOcFqtV36loQMfC9XEGdaZXKPmEuc1iDlxbrtBj/75YdFyPOpPUxhMOO3y7jYB5Ks
+         9rN7qhPi7HoBYswk07nTZujn25Mj5Vl2Cm67q4ytRmH/1UjhJKG6aw0C4UDbiy+c+7qq
+         mTrPEz/uEaX2jm89pxAhqncDsGmbNGcgWHnEwxXNZa0NTsTPWkQhO6gopSFFSKVjctsv
+         U0zUjI+LfGxO2XJa0GfOBRBTOdKDpHBXxbv04qqUIzb9HlOjXMsMq1if+WnDnwsDp2wB
+         ESOQ==
+X-Gm-Message-State: AO0yUKVaAebf6nESuxKW+SsXpOD3hc4JjAW6XpfErAcAnJ7q/GmM9Bgh
+	hXChIVZvRypCqqDHd4dT8lbZQoZQn64=
+X-Received: by 2002:a5d:8492:0:b0:753:7a7:927f with SMTP id t18-20020a5d8492000000b0075307a7927fmr2916895iom.18.1679432307483;
+        Tue, 21 Mar 2023 13:58:27 -0700 (PDT)
+Received: from CH2PR17MB3542.namprd17.prod.outlook.com ([2603:1036:304:2840::5])
+        by smtp.gmail.com with ESMTPSA id h8-20020a6b7a08000000b00746041ecbf9sm3858080iom.39.2023.03.21.13.58.27
+        for <noreply@notify.cloudflare.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 21 Mar 2023 13:58:27 -0700 (PDT)
+From: WALTER MCGHEE <silverbackgodx@gmail.com>
+To: Cloudflare <noreply@notify.cloudflare.com>
+Subject: Re: [Cloudflare]: Action Required - Update nameservers for
+ rcs-distribution.online
+Thread-Topic: [Cloudflare]: Action Required - Update nameservers for
+ rcs-distribution.online
+Thread-Index: ATYwLjkxo5ikiYykaAulypjSAB6D28ZYEx9L
+X-MS-Exchange-MessageSentRepresentingType: 1
+Date: Tue, 21 Mar 2023 20:58:26 +0000
+Message-ID:
+ <CH2PR17MB354204D78D769BC5BC0ABE9EAF819@CH2PR17MB3542.namprd17.prod.outlook.com>
+References: <4F.1A.29544.89E0A146@ih.mta1vrest.cc.prd.sparkpost>
+In-Reply-To: <4F.1A.29544.89E0A146@ih.mta1vrest.cc.prd.sparkpost>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-SCL: -1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+Content-Type: text/plain
+X-Area1Security-Origin: EXTERNAL 
+X-Area1Security-Processed: 5fe9a5a604d3412305d9085fb8d51e9a;2;NONE;2023-03-21T20:58:28;6870c340-c6ca-4529-8034-22ab76bc45aa
+MIME-Version: 1.0
+
+----- Message truncated -----
